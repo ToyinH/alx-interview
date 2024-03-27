@@ -4,6 +4,7 @@ Log parsing
 """
 import sys
 
+
 def print_statistics(total_size, status_counts):
     """
     print_statistics method
@@ -12,6 +13,7 @@ def print_statistics(total_size, status_counts):
     for status_code in sorted(status_counts.keys()):
         if status_counts[status_code] > 0:
             print("{}: {}".format(status_code, status_counts[status_code]))
+
 
 def parse_line(line):
     """
@@ -25,12 +27,15 @@ def parse_line(line):
             return int(status_code), int(file_size)
     return None, None
 
+
 def main():
     """
     main function
     """
     total_size = 0
-    status_counts = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
+    status_counts = {
+        200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0
+        }
     line_count = 0
 
     try:
@@ -45,6 +50,7 @@ def main():
                 print_statistics(total_size, status_counts)
     except KeyboardInterrupt:
         print_statistics(total_size, status_counts)
+
 
 if __name__ == "__main__":
     main()
