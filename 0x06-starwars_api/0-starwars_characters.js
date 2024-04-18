@@ -1,12 +1,11 @@
 #!/usr/bin/node
 
-// Import necessary modules
 const request = require('request');
 
-// Get movie ID from command line argument
+
 const movieId = process.argv[2];
 
-// Construct URL for fetching movie details
+
 const movieUrl = `https://swapi-api.alx-tools.com/films/${movieId}/`;
 
 // Make request to fetch movie details
