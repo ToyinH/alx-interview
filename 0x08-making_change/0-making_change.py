@@ -27,7 +27,11 @@ def makeChange(coins, total):
     - The solution's runtime will be evaluated in this task.
     """
     if total <= 0:
-        raise ValueError("Total must be greater than 0")
+        #raise ValueError("Total must be greater than 0")
+        return 0
+
+    if total == 0:
+        return 0
 
     # Create a list to store the minimum number of coins needed for each total
     dp = [float('inf')] * (total + 1)
