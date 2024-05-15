@@ -5,6 +5,9 @@ Prime Game
 
 
 def is_prime(num):
+    """
+    is_prime function
+    """
     if num <= 1:
         return False
     if num <= 3:
@@ -20,6 +23,9 @@ def is_prime(num):
 
 
 def isWinner(x, nums):
+    """
+    isWinner function
+    """
     maria_wins = 0
     ben_wins = 0
     for n in nums:
