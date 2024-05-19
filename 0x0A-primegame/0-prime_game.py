@@ -27,9 +27,9 @@ def isWinner(x, nums):
     isWinner function
     """
 
-    if x == 0 or not nums:
+    if x <= 0 or not nums:
         return None
-    
+
     maria_wins = 0
     ben_wins = 0
     for n in nums:
